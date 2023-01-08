@@ -14,10 +14,11 @@ public class DataHandler {
             "phoneNumber",
             "gender"};
 
-    public static void newData() {
+    public static Person p;
+
+    public static Person newData() {
 
         String inputData = DataReciever.newData();
-
         try {
 
             if (DataValidator.dataIsValid(inputData) == -1) {
@@ -31,16 +32,13 @@ public class DataHandler {
 
             DateValidator.dateIsValid(personData.get("birthDate"));
 
-            Person p = new Person(personData);
-
-
-
-            System.out.println("Запись создана успешно!");
+            p = new Person(personData);
+            return p;
         } catch (InputDataSizeException e) {
             System.out.println(e.getMessage());
-
         } catch (ParseException e) {
-            System.out.println("Введите дату корректно в формате dd.mm.yyyy");
+            System.out.println("Введите дату корректно в формате dd.mm.yyyy\n");
         }
+        return null;
     }
 }

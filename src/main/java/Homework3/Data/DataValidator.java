@@ -1,6 +1,7 @@
 package Homework3.Data;
 
 public class DataValidator {
+    // Требуемое количество пробелов в строке, которую вводит пользователь
     public static final int SPACENUMBER = 5;
 
     public static int dataIsValid(String inputData) {
@@ -16,6 +17,7 @@ public class DataValidator {
         if (spaceCounter != SPACENUMBER) {
             return -1;
         }
+
         return -100;
     }
 }

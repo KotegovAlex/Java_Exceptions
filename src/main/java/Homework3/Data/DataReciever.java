@@ -8,6 +8,7 @@ public class DataReciever {
         System.out.println("Введите данные в формате: " +
                 "Фамилия имя Отчество датарождения номертелефона пол");
         Scanner sc = new Scanner(System.in);
+
         return sc.nextLine().trim();
     }
 }

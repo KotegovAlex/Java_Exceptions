@@ -1,6 +1,7 @@
 package Homework3;
 
 import Homework3.Data.DataHandler;
+import Homework3.FileSystem.FileSaver;
 
 import java.util.Scanner;
 
@@ -11,7 +12,7 @@ public class MyApp {
         while (true) {
             String s = init();
             if (s.equals("new")) {
-                    DataHandler.newData();
+                FileSaver.save(DataHandler.newData());
             } else if (s.equals("exit")) {
                 return;
             } else {

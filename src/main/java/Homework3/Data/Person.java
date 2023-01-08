@@ -26,4 +26,8 @@ public class Person {
     public String toString() {
         return String.format("<%s><%s><%s><%s><%d><%s>", lastName, firstName, patronymic, birthDate, phoneNumber, gender);
     }
+
+    public String getLastName() {
+        return this.lastName;
+    }
 }
